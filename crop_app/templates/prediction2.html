@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/prdiction_css.css')}}">
+  </head>
+  <body>
+    <a href="/back_home" class="button"> &lt; Back</a>
+    <h3>According to your soil nutrients</h3>
+    <br>
+    <h3>You can grow</h3>
+    <h3>{{prediction2}}</h3>
+    <h5> FERTILIZER: {{fert1}}</h5>
+    <h3>{{prediction1}}</h3>
+    <h5> FERTILIZER: {{fert2}}</h5>
+
+<style>
+   .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fcfeff; /* Blue color, you can change it */
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px; /* Adjust text size as needed */
+            text-shadow: none;
+        }
+
+        /* Hover effect */
+        .button:hover {
+            background-color: #b32100; /* Darker blue color on hover */
+        }
+</style>
+
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style/stylesheet.css') }}">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.js"></script>
+	<title>Display Soil Data on Map</title>
+</head>
+
+<body>
+	<div class="sliders">
+		<div class="slider-container">
+			<div class="heading">
+				<label for="customRange1" class="form-label">Nitrogen</label>
+				<div id="nitrogen-slider-value"></div>
+			</div>
+			<input type="range" class="form-range" min="12" max="214" id="nitrogen">
+		</div>
+
+		<div class="slider-container">
+			<div class="heading">
+				<label for="customRange1" class="form-label">Phosphorous</label>
+				<div id="phosphorous-slider-value"></div>
+			</div>
+			<input type="range" class="form-range" min="1" max="903" id="phosphorous">
+		</div>
+
+		<div class="slider-container">
+			<div class="heading">
+				<label for="customRange1" class="form-label">Pottasium</label>
+				<div id="pottasium-slider-value"></div>
+			</div>
+			<input type="range" class="form-range" min="8" max="1241" id="pottasium">
+		</div>
+		<div class="slider-container">
+			<div class="heading">
+				<form action="/PredictMap" method="get">
+					<button type="submit" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
+						Add Further Values
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="{{ url_for('static', filename='js/sliderscript.js') }}"></script>
+	<!-- <script src="sliderscript.js"></script> -->
+	<div id="map">
+	</div>
+	<script src="{{ url_for('static', filename='js/mapscript.js') }}"></script>
+	<!-- <script src="mapscript1.js"></script> -->
+	
+</body>
+
+</html>

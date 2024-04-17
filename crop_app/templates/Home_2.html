@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cultivation System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/myhome.css')}}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Cultivation System</h1>
+      <p style="color: black;"></p>
+      <br>
+      <h3 style="color: black;"></h3>
+      <br>
+      <h2 style="color: black;">Click following button for Crop recommendation </h2>
+    </main>
+    <div class="button-container">
+      <form action="/map">
+          <input type="submit" id="predictWithMap" name="predictWithMap" value="Predict (With Map)">
+      </form>
+      <form action="/Predict">
+          <input type="submit" id="predictWithoutMap" name="predictWithoutMap" value="Predict (Without Map)">
+      </form>
+  </div>
+  <style>
+  .button-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center-align buttons */
+
+}
+.button-container form {
+    margin-right: 10px; /* Add spacing between buttons */
+}
+</style>  
+     <!-- <form action="/map">
+      <input type="submit" id="Predict" name="Predict" action="/map" value="Predict(With Map)">
+     </form>
+     <form action="/Predict">
+      <input type="submit" id="Predict" name="Predict" action="/Predict" value="Predict(Without MAP)">
+     </form> -->
+  </body>
+</html>

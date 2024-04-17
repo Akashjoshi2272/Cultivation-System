@@ -1,0 +1,23 @@
+/* prdiction_css.css */
+body {
+  background-image: url('image.jpg');
+  background-size: cover;
+  height: 100vh;
+  font-size: 36px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-shadow: 2px 2px #333;
+  margin: 20px;
+}
+
+h3 {
+  text-align:center;
+  color:#ffffff;
+  margin-bottom: 10px;
+}
+
+h5 {
+  text-align: center;
+  color:#ffffff;
+  margin-bottom: 10px;
+}

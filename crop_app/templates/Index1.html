@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivation System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/first.css')}}">
+</head>
+<body>
+  <a href="/back_home" class="button"> &lt;Back To Home</a>
+  <form action="form" method="post">
+
+  <label for="Nitrogen">Nitrogen:</label>
+  <label>{{ N }}</label>
+  
+
+  <label for="Phosphorus">Phosphorus:</label>
+  <label>{{ P }}</label>
+
+  <label for="Potassium">Potassium:</label>
+  <label>{{ K }}</label>
+
+  <label for="Temperature">Temperature:</label>
+  <input type="text" id="Temperature" name="Temperature" min="0" max="100" placeholder="Temperature in Degree Celcius" required>
+
+  <label for="Humidity">Humidity:</label>
+  <input type="text" id="Humidity" name="Humidity" min="0" max="100" placeholder="Relative Humidity in Percentage" required>
+
+  <label for="ph">ph:</label>
+  <label>{{ Ph }}</label>
+
+  <label for="Rainfall">Rainfall:</label>
+  <input type="text" id="Rainfall" name="Rainfall" placeholder="Rainfall in MM" required min="0" max="10000">
+
+  <label for="classifier">Select a model (Accuracy):</label>
+  <select id="classifier" NAME="classifier" required>
+    <option value="" disabled selected>Select an option</option>
+    <option value="RFC">Random Forest Classifier (99.81%)</option> 
+    <option value="DTC">Decision Tree Classifier (94.54%)</option>
+    <option value="GNB">Gaussian Naive Bayes (75.27%)</option>
+    <option value="LOGREG">Logistic Regression (71.09%)</option>
+  </select>
+  <input type="submit" id="submit" name="submit" value="Predict Your Crop">
+</form>
+<style>
+          /* Style for anchor tag */
+          .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fcfeff; /* Blue color, you can change it */
+            color: black;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size:18px;
+        }
+
+        /* Hover effect */
+        .button:hover {
+            background-color: #b32100; /* Darker blue color on hover */
+        }
+  #classifier {
+  color: gray; /* Default color for placeholder text */
+}
+
+#classifier option[value=""] {
+  display: none; /* Hide the placeholder option */
+}
+
+#classifier:before {
+  content: "Select an option";
+  color: gray; /* Color of placeholder text */
+}
+  select {
+    /* display: block; */
+    margin: 8px auto;
+    /* width: 100px; */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    border-radius: 10px;
+    border-style: none;
+    position: sticky;
+    /* display: inline-flex; */
+    padding: 8px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: -5px;
+}
+    
+  option{
+      background: #ccc9c9;
+      color: #0c0b0c;
+      }
+</style>
+
+
+</body>
+</html>
+
